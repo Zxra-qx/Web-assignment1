@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <header class="bg-blue-600 text-white p-6">
+        <h1 class="text-3xl font-bold text-center">Unit Converter</h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6">
+
+        <nav class="flex justify-center gap-4 mb-8">
+            <button id="weightTab" class="bg-blue-600 text-white px-4 py-2 rounded-md">
+                Weight
+            </button>
+
+            <button id="distanceTab" class="bg-blue-600 text-white px-4 py-2 rounded-md">
+                Distance
+            </button>
+
+            <button id="temperatureTab" class="bg-blue-600 text-white px-4 py-2 rounded-md">
+                Temperature
+            </button>
+        </nav>
+
+        <section class="bg-white rounded-lg shadow-md p-6">
+
+            <h2 class="text-2xl font-semibold text-center mb-6">
+                Weight Converter
+            </h2>
+
+            <form id="weightForm" class="space-y-4">
+
+                <div>
+                    <label for="weightValue" class="block font-medium mb-2">
+                        Enter weight
+                    </label>
+
+                    <input type="text" id="weightValue" placeholder="Example: 10 or 10, 20, 30"
+                        class="w-full border border-gray-300 rounded-md p-3">
+                </div>
+
+                <div>
+                    <label for="weightFrom" class="block font-medium mb-2">
+                        Convert from
+                    </label>
+
+                    <select id="weightFrom" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="kg">Kilograms (kg)</option>
+                        <option value="lb">Pounds (lb)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="weightTo" class="block font-medium mb-2">
+                        Convert to
+                    </label>
+
+                    <select id="weightTo" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="lb">Pounds (lb)</option>
+                        <option value="kg">Kilograms (kg)</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700">
+                    Convert
+                </button>
+
+            </form>
+
+            <div id="weightResult" class="mt-6 text-center text-lg font-semibold"></div>
+
+        </section>
+        <section class="hidden bg-white rounded-lg shadow-md p-6 mt-6">
+
+            <h2 class="text-2xl font-semibold text-center mb-6">
+                Distance Converter
+            </h2>
+
+            <form id="distanceForm" class="space-y-4">
+
+                <div>
+                    <label for="distanceValue" class="block font-medium mb-2">
+                        Enter distance
+                    </label>
+
+                    <input type="text" id="distanceValue" placeholder="Example: 10 or 10, 20, 30"
+                        class="w-full border border-gray-300 rounded-md p-3">
+                </div>
+
+                <div>
+                    <label for="distanceFrom" class="block font-medium mb-2">
+                        Convert from
+                    </label>
+
+                    <select id="distanceFrom" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="km">Kilometres (km)</option>
+                        <option value="mi">Miles (mi)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="distanceTo" class="block font-medium mb-2">
+                        Convert to
+                    </label>
+
+                    <select id="distanceTo" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="mi">Miles (mi)</option>
+                        <option value="km">Kilometres (km)</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700">
+                    Convert
+                </button>
+
+            </form>
+
+            <div id="distanceResult" class="mt-6 text-center text-lg font-semibold"></div>
+
+        </section>
+
+        <section class="hidden bg-white rounded-lg shadow-md p-6 mt-6">
+
+            <h2 class="text-2xl font-semibold text-center mb-6">
+                Temperature Converter
+            </h2>
+
+            <form id="temperatureForm" class="space-y-4">
+
+                <div>
+                    <label for="temperatureValue" class="block font-medium mb-2">
+                        Enter temperature
+                    </label>
+
+                    <input type="text" id="temperatureValue" placeholder="Example: 25 or 25, 30, 35"
+                        class="w-full border border-gray-300 rounded-md p-3">
+                </div>
+
+                <div>
+                    <label for="temperatureFrom" class="block font-medium mb-2">
+                        Convert from
+                    </label>
+
+                    <select id="temperatureFrom" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="c">Celsius (°C)</option>
+                        <option value="f">Fahrenheit (°F)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="temperatureTo" class="block font-medium mb-2">
+                        Convert to
+                    </label>
+
+                    <select id="temperatureTo" class="w-full border border-gray-300 rounded-md p-3">
+                        <option value="f">Fahrenheit (°F)</option>
+                        <option value="c">Celsius (°C)</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700">
+                    Convert
+                </button>
+
+            </form>
+
+            <div id="temperatureResult" class="mt-6 text-center text-lg font-semibold"></div>
+
+        </section>
+
+    </main>
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>Unit Converter - Web Development 2</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
