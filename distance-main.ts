@@ -1,3 +1,8 @@
+// Name: Zara Qadri
+// Date: September 28th 2026
+// program Assignment 1 unit converter
+// ts code for id information and calculations
+
 // Sets the formula for conversions
 const milesToKilometers = (miles: number): number => miles * 1.60934;
 const kilometersToMiles = (kilometers: number): number => kilometers / 1.60934;
